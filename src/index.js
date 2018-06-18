@@ -4,6 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import CounterR15 from "./counter-r15";
+import CounterR17 from "./counter-r17";
 
 export const MOUNTING = "MOUNTING";
 export const UPDATING = "UPDATING";
@@ -24,7 +25,7 @@ class App extends React.Component {
     if (react === "r15") {
       return <CounterR15 stage={stage} />;
     } else if (react === "r17") {
-      return null;
+      return <CounterR17 stage={stage} />;
     }
   };
 
