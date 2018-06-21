@@ -25,8 +25,6 @@ class Counter extends React.Component {
   }
 
   render() {
-    // Mounting. Initial render called
-
     return <div className="counter">{this.state.counter}</div>;
   }
 
@@ -43,8 +41,8 @@ class Counter extends React.Component {
     }, 3000);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.stage === UPDATING) {
+  componentWillReceiveProps() {
+    if (this.props.stage === UPDATING) {
       // Updating. Called when a prop has changed
       debugger;
     }
